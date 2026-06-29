@@ -1,17 +1,20 @@
-{
+﻿{
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "mcpServers": {
-    "awslabs.aws-documentation-mcp-server": {
-      "name": "AWS Documentation Server",
-      "description": "Allows searching and fetching markdown versions of official AWS documentation.",
-      "command": "uvx",
-      "args": [
-        "awslabs.aws-documentation-mcp-server@latest"
-      ],
-      "env": {
-        "FASTMCP_LOG_LEVEL": "ERROR",
-        "AWS_DOCUMENTATION_PARTITION": "aws"
-      }
+  "name": "com.awslabs/aws-documentation-mcp-server",
+  "title": "AWS Documentation Server",
+  "description": "Allows searching and fetching markdown versions of official AWS documentation.",
+  "packages": [
+    {
+      "registryType": "pypi",
+      "identifier": "awslabs.aws-documentation-mcp-server",
+      "runtimeHint": "uvx",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        { "name": "FASTMCP_LOG_LEVEL", "value": "ERROR" },
+        { "name": "AWS_DOCUMENTATION_PARTITION", "value": "aws" }
+      ]
     }
-  }
+  ]
 }
