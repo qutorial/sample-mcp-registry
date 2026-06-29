@@ -1,0 +1,17 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "mcpServers": {
+    "awslabs.aws-documentation-mcp-server": {
+      "name": "AWS Documentation Server",
+      "description": "Allows searching and fetching markdown versions of official AWS documentation.",
+      "command": "uvx",
+      "args": [
+        "awslabs.aws-documentation-mcp-server@latest"
+      ],
+      "env": {
+        "FASTMCP_LOG_LEVEL": "ERROR",
+        "AWS_DOCUMENTATION_PARTITION": "aws"
+      }
+    }
+  }
+}
